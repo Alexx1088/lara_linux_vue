@@ -1,32 +1,32 @@
 <template>
     <div>
-        <SinglePostComponent></SinglePostComponent>
         <CreateComponent></CreateComponent>
+        <IndexComponent></IndexComponent>
 
-<!--        <table class="table">-->
-<!--            <thead>-->
-<!--            <tr>-->
-<!--                <th scope="col">#</th>-->
-<!--                <th scope="col">Name</th>-->
-<!--                <th scope="col">Age</th>-->
-<!--                <th scope="col">Job</th>-->
-<!--            </tr>-->
-<!--            </thead>-->
-<!--            <tbody>-->
-<!--                            <tr v-for="person in persons">-->
-<!--                              <th scope="row">{{ person.id}}</th>-->
-<!--                              <td>{{ person.name}}</td>-->
-<!--                              <td>{{ person.age}}</td>-->
-<!--                              <td>{{ person.job}}</td>-->
-<!--                            </tr>-->
-<!--            </tbody>-->
-<!--        </table>-->
+        <!--        <table class="table">-->
+        <!--            <thead>-->
+        <!--            <tr>-->
+        <!--                <th scope="col">#</th>-->
+        <!--                <th scope="col">Name</th>-->
+        <!--                <th scope="col">Age</th>-->
+        <!--                <th scope="col">Job</th>-->
+        <!--            </tr>-->
+        <!--            </thead>-->
+        <!--            <tbody>-->
+        <!--                            <tr v-for="person in persons">-->
+        <!--                              <th scope="row">{{ person.id}}</th>-->
+        <!--                              <td>{{ person.name}}</td>-->
+        <!--                              <td>{{ person.age}}</td>-->
+        <!--                              <td>{{ person.job}}</td>-->
+        <!--                            </tr>-->
+        <!--            </tbody>-->
+        <!--        </table>-->
     </div>
 </template>
 
 <script>
-import SinglePostComponent from "./SinglePostComponent";
 import CreateComponent from "./CreateComponent";
+import IndexComponent from "./IndexComponent";
 
 export default {
     name: "PostComponent",
@@ -39,26 +39,26 @@ export default {
 
     mounted() {
 
-     //   this.getPersons()
+        //   this.getPersons()
 
     },
 
 
     methods:
         {
-           /* getPersons() {*/
-           /*     axios.get('/persons')*/
-           /*         .then(res => {*/
-           /*            this.persons = res.data*/
-           /*         })*/
-           /* }*/
+            /* getPersons() {*/
+            /*     axios.get('/persons')*/
+            /*         .then(res => {*/
+            /*            this.persons = res.data*/
+            /*         })*/
+            /* }*/
         },
 
     computed: {},
 
     components: {
-        SinglePostComponent,
-        CreateComponent
+        CreateComponent,
+        IndexComponent
     }
 }
 </script>

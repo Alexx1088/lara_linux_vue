@@ -8,10 +8,11 @@ use App\Models\Person;
 
 class StoreController extends Controller
 {
-    public function __invoke(StoreRequest $request){
+    public function __invoke(StoreRequest $request)
+    {
 
         $data = $request->validated();
-   $person = Person::create($data);
+        $person = Person::create($data);
         return $person;
 
     }
