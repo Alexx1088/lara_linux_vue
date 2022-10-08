@@ -12,19 +12,35 @@
         <div class="mb-3">
             <input @click.prevent="addPerson" class="btn btn-primary" value="Добавить">
         </div>
+      <SomeComponent :obj="obj"></SomeComponent>
     </div>
-</template>
+ </template>
 
 <script>
+import SomeComponent from "./SomeComponent";
 export default {
     name: "CreateComponent",
     data() {
         return {
             name: null,
             age: null,
-            job: null
+            job: null,
+            obj: {
+                color: 'yellow',
+                number: 50,
+                isPublished: false
+            }
         }
     },
+
+    mounted() {
+
+   //this.$parent.$refs.index.indexLog()
+
+    },
+components: {
+  SomeComponent
+},
 
     methods: {
         addPerson() {
@@ -33,7 +49,8 @@ export default {
                    this.name = null
                    this.age = null
                    this.job = null
-                   console.log(res);
+            /      this.$parent.$refs.index.getPeople()
+                  // console.log(res);
                })
                    }
     }

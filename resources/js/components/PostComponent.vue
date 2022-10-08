@@ -1,7 +1,7 @@
 <template>
     <div>
         <CreateComponent></CreateComponent>
-        <IndexComponent></IndexComponent>
+        <IndexComponent ref="index"></IndexComponent>
 
         <!--        <table class="table">-->
         <!--            <thead>-->
@@ -38,20 +38,14 @@ export default {
     },
 
     mounted() {
-
-        //   this.getPersons()
-
+        console.log(this.$refs.index.name);
     },
-
 
     methods:
         {
-            /* getPersons() {*/
-            /*     axios.get('/persons')*/
-            /*         .then(res => {*/
-            /*            this.persons = res.data*/
-            /*         })*/
-            /* }*/
+            parentLog(){
+               console.log('this is the parent component');
+            }
         },
 
     computed: {},
