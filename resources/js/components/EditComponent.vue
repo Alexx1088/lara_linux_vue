@@ -1,32 +1,12 @@
-<!--<template>
-    <div>
-        <table class="table">
-            <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Name</th>
-                <th scope="col">Age</th>
-                <th scope="col">Job</th>
-                <th scope="col">Edit</th>
-                <th scope="col">Delete</th>
-            </tr>
-            </thead>
-            <tbody>-->
-            <template>
-                <tr :class="this.$parent.isEdit(person.id) ? '' : 'd-none' ">
-                    <th scope="row">{{ person.id }}</th>
-                    <td><input type="text" v-model="name" class="form-control"></td>
-                    <td><input type="number" v-model="age" class="form-control"></td>
-                    <td><input type="text" v-model="job" class="form-control"></td>
-                    <td><a href="#" @click.prevent="updatePerson(person.id)" class="btn btn-success">Update</a></td>
-                </tr>
-            </template>
-
-<!--            </tbody>
-        </table>
-    </div>
-</template>-->
-
+<template>
+    <tr :class="this.$parent.isEdit(person.id) ? '' : 'd-none' ">
+        <th scope="row">{{ person.id }}</th>
+        <td><input type="text" v-model="name" class="form-control"></td>
+        <td><input type="number" v-model="age" class="form-control"></td>
+        <td><input type="text" v-model="job" class="form-control"></td>
+        <td><a href="#" @click.prevent="updatePerson(person.id)" class="btn btn-success">Update</a></td>
+    </tr>
+</template>
 <script>
 export default {
     name: "EditComponent",
