@@ -24,3 +24,4 @@ Route::group(['namespace' => 'Person', 'prefix' => 'people'], function () {
     Route::patch('/{person}', 'UpdateController');
     Route::delete('/{person}', 'DeleteController');
 });
+//comment
