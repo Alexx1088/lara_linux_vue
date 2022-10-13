@@ -25,8 +25,8 @@ __webpack_require__.r(__webpack_exports__);
     getPerson: function getPerson() {
       var _this = this;
 
-      axios.get('/api/people/' + this.$route.params.id).then(function (res) {
-        _this.person = res.data;
+      axios.get("/api/people/".concat(this.$route.params.id)).then(function (res) {
+        _this.person = res.data.data;
       });
     }
   }
@@ -49,7 +49,16 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", [_c("div", [_vm._v("\n        Name: " + _vm._s(this.person.name) + "\n    ")]), _vm._v(" "), _c("div", [_vm._v("\n        Age: " + _vm._s(this.person.age) + "\n    ")]), _vm._v(" "), _c("div", [_vm._v("\n        Job: " + _vm._s(this.person.job) + "\n    ")])]);
+  return _vm.person ? _c("div", [_c("div", [_vm._v("\n        Name: " + _vm._s(this.person.name) + "\n    ")]), _vm._v(" "), _c("div", [_vm._v("\n        Age: " + _vm._s(this.person.age) + "\n    ")]), _vm._v(" "), _c("div", [_vm._v("\n        Job: " + _vm._s(this.person.job) + "\n    ")]), _vm._v(" "), _c("router-link", {
+    attrs: {
+      to: {
+        name: "person.edit",
+        params: {
+          id: this.person.id
+        }
+      }
+    }
+  }, [_vm._v("Edit")])], 1) : _vm._e();
 };
 
 var staticRenderFns = [];

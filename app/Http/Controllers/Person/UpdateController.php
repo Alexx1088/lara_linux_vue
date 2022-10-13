@@ -13,7 +13,8 @@ class UpdateController extends Controller
     {
         $data = $request->validated();
         $person->update($data);
-        return $person;
+    //    return $person;
+        return response([]);
 
     }
 }

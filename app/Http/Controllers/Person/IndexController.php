@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Person;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Person\StoreRequest;
+use App\Http\Resources\Percon\PersonResource;
 use App\Models\Person;
 
 class IndexController extends Controller
@@ -13,7 +14,7 @@ class IndexController extends Controller
 
         $people = Person::all();
 
-        return $people;
+        return PersonResource::collection($people);
 
     }
 }
